@@ -59,25 +59,27 @@ class _EditBookScreenState extends State<EditBookScreen> {
       appBar: AppBar(
         title: Text("Edit Book"),
       ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            bookTitleTextField(),
-            SizedBox(
-              height: 10.0,
-            ),
-            bookAuthorTextField(),
-            SizedBox(
-              height: 10.0,
-            ),
-            bookDescriptionTextField(),
-            SizedBox(
-              height: 10.0,
-            ),
-            submitButton(),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              bookTitleTextField(),
+              SizedBox(
+                height: 10.0,
+              ),
+              bookAuthorTextField(),
+              SizedBox(
+                height: 10.0,
+              ),
+              bookDescriptionTextField(),
+              SizedBox(
+                height: 10.0,
+              ),
+              submitButton(),
+            ],
+          ),
         ),
       ),
     );
