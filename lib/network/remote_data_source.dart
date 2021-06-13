@@ -19,7 +19,13 @@ class RemoteDataSource {
   StreamController<Result> _addBookStream;
   Stream<Result> hasBookAdded() => _addBookStream.stream;
 
-  void init() => _addBookStream = StreamController();
+  StreamController<Result> _updateBookStream;
+  Stream<Result> hasBookUpdated() => _updateBookStream.stream;
+
+  void init() {
+    _addBookStream = StreamController();
+    _updateBookStream = StreamController();
+  }
 
   Future<Result> getBooks() async {
     try {
@@ -37,6 +43,7 @@ class RemoteDataSource {
   }
 
   void addBook(Book book) async {
+    print(book.toJson());
     _addBookStream.sink.add(Result<String>.loading("Loading"));
     try {
       final response = await client.request(
@@ -49,6 +56,22 @@ class RemoteDataSource {
       }
     } catch (error) {
       _addBookStream.sink.add(Result.error("Something went wrong!"));
+    }
+  }
+
+  void updateBook(Book book, int index) async {
+    _updateBookStream.sink.add(Result<String>.loading("Loading"));
+    try {
+      final response = await client.request(
+          requestType: RequestType.PUT, path: "books/$index", parameter: book);
+      if (response.statusCode == 200) {
+        _updateBookStream.sink.add(Result<NetworkResponse>.success(
+            NetworkResponse.fromRawJson(response.body)));
+      } else {
+        _updateBookStream.sink.add(Result.error("Something went wrong"));
+      }
+    } catch (error) {
+      _updateBookStream.sink.add(Result.error("Something went wrong!"));
     }
   }
 

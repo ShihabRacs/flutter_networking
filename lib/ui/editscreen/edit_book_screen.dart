@@ -4,28 +4,39 @@ import 'package:book_app/network/remote_data_source.dart';
 import 'package:book_app/ui/common_widget/progress_dialog.dart';
 import 'package:flutter/material.dart';
 
-class AddBookScreen extends StatefulWidget {
+class EditBookScreen extends StatefulWidget {
+  Book book;
+  int index;
+  
+  EditBookScreen(this.book, this.index);
+  
   @override
-  _AddBookScreenState createState() => _AddBookScreenState();
+  _EditBookScreenState createState() => _EditBookScreenState();
 }
 
-class _AddBookScreenState extends State<AddBookScreen> {
+class _EditBookScreenState extends State<EditBookScreen> {
   //variables to hold values that is provided in the TextFields
-  String _name='', _author='', _description = '';
+  TextEditingController nameController = TextEditingController();
+  TextEditingController authorController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
+
+  bool isUpdateEnabled;
 
   RemoteDataSource _apiResponse = RemoteDataSource();
-
-  bool isAddEnabled = false;
 
   @override
   void initState() {
     super.initState();
+    isUpdateEnabled = true;
+    nameController.text = widget.book.name;
+    authorController.text = widget.book.author;
+    descriptionController.text = widget.book.description;
     _apiResponse.init();
-    hasBookAddedListener();
+    hasBookUpdatedListener();
   }
 
-  void hasBookAddedListener() {
-    _apiResponse.hasBookAdded().listen((Result result) {
+  void hasBookUpdatedListener() {
+    _apiResponse.hasBookUpdated().listen((Result result) {
       if (result is LoadingState) {
         showProgressDialog();
       } else if (result is SuccessState) {
@@ -33,7 +44,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
         Navigator.pop(context, true); //navigate back to Favorite Book screen
       } else {
         SnackBar(
-          content: Text("Unable to add book"),
+          content: Text("Unable to update book"),
           duration: Duration(seconds: 2),
         );
       }
@@ -46,7 +57,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Book"),
+        title: Text("Edit Book"),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -76,73 +87,72 @@ class _AddBookScreenState extends State<AddBookScreen> {
 
   TextField bookTitleTextField() {
     return TextField(
+      onChanged: (value) {
+        setButton();
+      },
+      controller: nameController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: "Book Title",
         labelText: "Title",
       ),
-      onChanged: (value) {
-        _name = value;
-        setButton();
-      },
     );
   }
 
   TextField bookAuthorTextField() {
     return TextField(
+      onChanged: (value) {
+        setButton();
+      },
+      controller: authorController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: "Book Author",
         labelText: "Author",
       ),
-      onChanged: (value) {
-        _author = value;
-        setButton();
-      },
     );
   }
 
   TextField bookDescriptionTextField() {
     return TextField(
-
+      onChanged: (value) {
+        setButton();
+      },
+      controller: descriptionController,
       maxLines: 4,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: "Book Description",
         labelText: "Description",
       ),
-      onChanged: (value) {
-        _description = value;
-        setButton();
-      },
     );
   }
 
   void setButton() {
     setState(() {
       if(
-      _name.isEmpty||
-      _description.isEmpty||
-      _author.isEmpty
+      nameController.text == '' ||
+          authorController.text == '' ||
+          descriptionController.text == ''
       ) {
-        isAddEnabled = false;
+        isUpdateEnabled = false;
       } else {
-        isAddEnabled = true;
+        isUpdateEnabled = true;
       }
     });
   }
 
-  void addApiCall() {
+  void updateApiCall() {
     final book = Book(
-        name: _name, author: _author, description: _description);
-    _apiResponse.addBook(book);
+        name: nameController.text, author: authorController.text, description: descriptionController.text);
+    _apiResponse.updateBook(book, widget.index);
   }
+
   ElevatedButton submitButton() {
     return ElevatedButton(
-      onPressed: isAddEnabled ? addApiCall:null,
-
+      onPressed: isUpdateEnabled ? updateApiCall : null,
       child: Text(
-        "Add",
+        "Update",
         style: TextStyle(color: Colors.white),
       ),
     );

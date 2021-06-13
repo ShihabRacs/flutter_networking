@@ -1,0 +1,54 @@
+ {
+  "books":
+	[
+	   {
+			"name": "To Kill a Mockingbird",
+			"author": "Harper Lee",
+			"description": "To Kill a Mockingbird was published in 1960 and became an immediate classic of literature. The novel examines racism in the American South through the innocent wide eyes of a clever young girl named Jean Louise (“Scout”) Finch."
+		 
+	   },
+		{
+			"name": "The Great Gatsby",
+			"author": "F. Scott Fitzgerald",
+			"description": "The Great Gatsby provides an insider’s look into the Jazz Age of the 1920s in United States history while at the same time critiquing the idea of the American Dream."
+		  
+		},
+		{
+			"name": "One Hundred Years of Solitude",
+			"author": "Gabriel García Márquez",
+			"description": "The novel tells the story of seven generations of the Buendía family and follows the establishment of their town Macondo until its destruction along with the last of the family’s descendents."
+		},
+		{
+			"name": "A Passage to India",
+			"author": "E.M. Forster",
+			"description": "The novel tells the story of seven generations of the Buendía family and follows the establishment of their town Macondo until its destruction along with the last of the family’s descendents."
+		},
+		{
+			"name": "Invisible Man",
+			"author": "Ralph Ellison",
+			"description": "The novel tells the story of seven generations of the Buendía family and follows the establishment of their town Macondo until its destruction along with the last of the family’s descendents."
+		},
+		{
+			"name": "Neon In Daylight",
+			"author": "Hermione Hoby",
+			"description": "The debut novel from Guardian and New Yorker writer Hermione Hoby finds native Brit Kate in heatwave-struck New York where she meets two strangers, Bill and Inez, who she falls for in different ways and who pull her into the frantic rhythm of the city."
+		},
+		{
+			"name": "The Mermaid and Mrs Hancock",
+			"author": "Imogen Hermes Gower",
+			"description": "Gossip spreads through the docks of Georgian London when a merchant's ship is traded for a mermaid. But their new-found popularity leads to an encounter that will doom his dazzling prize."
+		  
+		},
+		  {
+			"name": "Asymmetry",
+			"author": "Lisa Halliday",
+			"description": "Asymmetry draws together two improbably linked stories: a young woman who starts an affair with a famous writer in New York and an Iraqi-American who is detained at Heathrow airport."
+			
+		  },
+		{
+			"name": "Red Clocks",
+			"author": "Leni Zumas",
+			"description": "Set in an imagined future America were abortion is illegal, IVF is banned and new legislation grants rights to every new embryo, five women suffer the consequences of the new world order with one put on trial in a crazed witch-hunt."
+		}
+  ]
+} 

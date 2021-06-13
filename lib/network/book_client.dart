@@ -24,6 +24,9 @@ class BookClient {
       case RequestType.POST:
         return _client.post("$_baseUrl/$path",
             headers: {"Content-Type": "application/json"}, body: json.encode(parameter));
+      case RequestType.PUT:
+        return _client.put("$_baseUrl/$path",
+            headers: {"Content-Type": "application/json"}, body: json.encode(parameter));
       case RequestType.DELETE:
         return _client.delete("$_baseUrl/$path");
       default:
