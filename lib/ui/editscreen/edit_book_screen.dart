@@ -20,11 +20,14 @@ class _EditBookScreenState extends State<EditBookScreen> {
   TextEditingController authorController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
 
+  bool isUpdateEnabled;
+
   RemoteDataSource _apiResponse = RemoteDataSource();
 
   @override
   void initState() {
     super.initState();
+    isUpdateEnabled = true;
     nameController.text = widget.book.name;
     authorController.text = widget.book.author;
     descriptionController.text = widget.book.description;
@@ -82,6 +85,9 @@ class _EditBookScreenState extends State<EditBookScreen> {
 
   TextField bookTitleTextField() {
     return TextField(
+      onChanged: (value) {
+        setButton();
+      },
       controller: nameController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -93,6 +99,9 @@ class _EditBookScreenState extends State<EditBookScreen> {
 
   TextField bookAuthorTextField() {
     return TextField(
+      onChanged: (value) {
+        setButton();
+      },
       controller: authorController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -104,6 +113,9 @@ class _EditBookScreenState extends State<EditBookScreen> {
 
   TextField bookDescriptionTextField() {
     return TextField(
+      onChanged: (value) {
+        setButton();
+      },
       controller: descriptionController,
       maxLines: 4,
       decoration: InputDecoration(
@@ -114,13 +126,29 @@ class _EditBookScreenState extends State<EditBookScreen> {
     );
   }
 
+  void setButton() {
+    setState(() {
+      if(
+      nameController.text == '' ||
+          authorController.text == '' ||
+          descriptionController.text == ''
+      ) {
+        isUpdateEnabled = false;
+      } else {
+        isUpdateEnabled = true;
+      }
+    });
+  }
+
+  void updateApiCall() {
+    final book = Book(
+        name: nameController.text, author: authorController.text, description: descriptionController.text);
+    _apiResponse.updateBook(book, widget.index);
+  }
+
   ElevatedButton submitButton() {
     return ElevatedButton(
-      onPressed: () {
-        final book = Book(
-            name: nameController.text, author: authorController.text, description: descriptionController.text);
-        _apiResponse.updateBook(book, widget.index);
-      },
+      onPressed: isUpdateEnabled ? updateApiCall : null,
       child: Text(
         "Update",
         style: TextStyle(color: Colors.white),
