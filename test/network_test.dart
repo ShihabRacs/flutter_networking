@@ -14,13 +14,13 @@ import 'mock_client.dart';
 void main() {
   group("BookRepository", () {
     var client = MockedClient();
-    final String baseUrl = "http://127.0.0.1:8888";
+    final String baseUrl = "http://10.0.2.2:8888";
     test("Testing successful get request", () async {
       RemoteDataSource apiResponse = RemoteDataSource();
       apiResponse.client = BookClient(client);
       when(client.get("$baseUrl/books")).thenAnswer((_) async =>
           Response(
-              '{"bookList": [{"name": "To Kill a Mockingbird","author": "Harper Lee","description": "To Kill a Mockingbird was published in 1960 and became an immediate classic of literature. The novel examines racism in the American South through the innocent wide eyes of a clever young girl named Jean Louise (“Scout”) Finch."}]}',
+              '{"books": [{"name": "To Kill a Mockingbird","author": "Harper Lee","description": "To Kill a Mockingbird was published in 1960 and became an immediate classic of literature. The novel examines racism in the American South through the innocent wide eyes of a clever young girl named Jean Louise (“Scout”) Finch."}]}',
               200,
               headers: {
                 HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8'
@@ -34,7 +34,7 @@ void main() {
       RemoteDataSource apiResponse = RemoteDataSource();
       apiResponse.client = BookClient(client);
       final index = 0;
-      when(client.delete("http://127.0.0.1:8888/deleteBook/$index")).thenAnswer(
+      when(client.delete("http://10.0.2.2:8888/books/$index")).thenAnswer(
           (_) async => Response(
                   '{"message": "Book deleted successfully"}', 200, headers: {
                 HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8'
@@ -43,12 +43,26 @@ void main() {
       expect(await apiResponse.deleteBook(index),
           isInstanceOf<SuccessState<NetworkResponse>>());
     });
-
-    test("Testing failed delete request", () async {
+    test("Testing successful put request", () async {
       RemoteDataSource apiResponse = RemoteDataSource();
       apiResponse.client = BookClient(client);
       final index = 100;
-      when(client.delete("http://127.0.0.1:8888/deleteBook/$index")).thenAnswer(
+      when(client.put("http://10.0.2.2:8888/books/$index")).thenAnswer((_) async =>
+          Response(
+              '{"books": [{"name": "To Kill a Mockingbird","author": "Harper Lee","description": "To Kill a Mockingbird was published in 1960 and became an immediate classic of literature. The novel examines racism in the American South through the innocent wide eyes of a clever young girl named Jean Louise (“Scout”) Finch."}]}',
+              200,
+              headers: {
+                HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8'
+              }));
+
+      expect(
+          await apiResponse.getBooks(), isInstanceOf<SuccessState<Library>>());
+    });
+    test("Testing failed delete request", () async {
+      RemoteDataSource apiResponse = RemoteDataSource();
+      apiResponse.client = BookClient(client);
+      final index = 1000;
+      when(client.delete("http://10.0.2.2:8888/books/$index")).thenAnswer(
           (_) async => Response('{"message": "Book not found"}', 404, headers: {
                 HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8'
               }));
@@ -57,4 +71,5 @@ void main() {
           isInstanceOf<ErrorState<NetworkResponse>>());
     });
   });
+
 }

@@ -11,7 +11,7 @@ class AddBookScreen extends StatefulWidget {
 
 class _AddBookScreenState extends State<AddBookScreen> {
   //variables to hold values that is provided in the TextFields
-  String _name, _author, _description;
+  String _name='', _author='', _description = '';
 
   RemoteDataSource _apiResponse = RemoteDataSource();
 
