@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19a0accb-6a2f-4953-bd72-e1c4c2244840" name="Default Changelist" comment="" />
+    <list default="true" id="19a0accb-6a2f-4953-bd72-e1c4c2244840" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/addscreen/add_book_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/addscreen/add_book_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ts7W4fdtrHOPoWMiKMDsoyoSAy" />
   <component name="ProjectViewState">
@@ -54,22 +70,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623548843522" />
-    <state width="1257" height="335" key="GridCell.Tab.0.bottom" timestamp="1623591766887">
+    <state width="1863" height="170" key="GridCell.Tab.0.bottom" timestamp="1623612407942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1257" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
-    <state width="1257" height="335" key="GridCell.Tab.0.center" timestamp="1623591766887">
+    <state width="1863" height="170" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623612407942" />
+    <state width="1863" height="170" key="GridCell.Tab.0.center" timestamp="1623612407941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1257" height="335" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
-    <state width="1257" height="335" key="GridCell.Tab.0.left" timestamp="1623591766887">
+    <state width="1863" height="170" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623612407941" />
+    <state width="1863" height="170" key="GridCell.Tab.0.left" timestamp="1623612407941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1257" height="335" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
-    <state width="1257" height="335" key="GridCell.Tab.0.right" timestamp="1623591766887">
+    <state width="1863" height="170" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623612407941" />
+    <state width="1863" height="170" key="GridCell.Tab.0.right" timestamp="1623612407941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1257" height="335" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
+    <state width="1863" height="170" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623612407941" />
     <state x="461" y="154" key="SettingsEditor" timestamp="1623559647183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

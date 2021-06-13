@@ -15,6 +15,8 @@ class _AddBookScreenState extends State<AddBookScreen> {
 
   RemoteDataSource _apiResponse = RemoteDataSource();
 
+  bool isAddEnabled = false;
+
   @override
   void initState() {
     super.initState();
@@ -79,6 +81,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
       ),
       onChanged: (value) {
         _name = value;
+        setButton();
       },
     );
   }
@@ -92,12 +95,14 @@ class _AddBookScreenState extends State<AddBookScreen> {
       ),
       onChanged: (value) {
         _author = value;
+        setButton();
       },
     );
   }
 
   TextField bookDescriptionTextField() {
     return TextField(
+
       maxLines: 4,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -106,17 +111,34 @@ class _AddBookScreenState extends State<AddBookScreen> {
       ),
       onChanged: (value) {
         _description = value;
+        setButton();
       },
     );
   }
 
+  void setButton() {
+    setState(() {
+      if(
+      _name.isEmpty||
+      _description.isEmpty||
+      _author.isEmpty
+      ) {
+        isAddEnabled = false;
+      } else {
+        isAddEnabled = true;
+      }
+    });
+  }
+
+  void addApiCall() {
+    final book = Book(
+        name: _name, author: _author, description: _description);
+    _apiResponse.addBook(book);
+  }
   ElevatedButton submitButton() {
     return ElevatedButton(
-      onPressed: () {
-        final book = Book(
-            name: _name, author: _author, description: _description);
-        _apiResponse.addBook(book);
-      },
+      onPressed: isAddEnabled ? addApiCall:null,
+
       child: Text(
         "Add",
         style: TextStyle(color: Colors.white),
