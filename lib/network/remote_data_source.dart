@@ -60,14 +60,10 @@ class RemoteDataSource {
   }
 
   void updateBook(Book book, int index) async {
-    print(book.toJson());
     _updateBookStream.sink.add(Result<String>.loading("Loading"));
     try {
       final response = await client.request(
           requestType: RequestType.PUT, path: "books/$index", parameter: book);
-      print("=====================");
-      print(response.body);
-      print("=====================");
       if (response.statusCode == 200) {
         _updateBookStream.sink.add(Result<NetworkResponse>.success(
             NetworkResponse.fromRawJson(response.body)));

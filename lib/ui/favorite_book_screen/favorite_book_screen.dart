@@ -24,7 +24,15 @@ class _FavoriteBooksScreenState extends State<FavoriteBooksScreen> {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => AddBookScreen()),
-          );
+          ).then((value) {
+            if (value) {
+              final snackBar = SnackBar(
+                content: Text("Add Success"),
+                duration: Duration(seconds: 2),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            }
+          });
         },
         child: Icon(Icons.add),
       ),
@@ -83,7 +91,15 @@ class _FavoriteBooksScreenState extends State<FavoriteBooksScreen> {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => EditBookScreen(bookCollection.books[index], 100)), // Hardcoded index 100 because the mock server is set to receive only id 100
-          );
+          ).then((value) {
+            if (value) {
+              final snackBar = SnackBar(
+                content: Text("Update Success"),
+                duration: Duration(seconds: 2),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            }
+          });
         },
       ),
     );

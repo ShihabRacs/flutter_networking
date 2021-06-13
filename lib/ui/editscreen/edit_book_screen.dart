@@ -41,7 +41,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
         showProgressDialog();
       } else if (result is SuccessState) {
         Navigator.pop(context); //close the progress dialog
-        Navigator.pop(context); //navigate back to Favorite Book screen
+        Navigator.pop(context, true); //navigate back to Favorite Book screen
       } else {
         SnackBar(
           content: Text("Unable to update book"),
