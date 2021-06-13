@@ -4,26 +4,36 @@ import 'package:book_app/network/remote_data_source.dart';
 import 'package:book_app/ui/common_widget/progress_dialog.dart';
 import 'package:flutter/material.dart';
 
-class AddBookScreen extends StatefulWidget {
+class EditBookScreen extends StatefulWidget {
+  Book book;
+  int index;
+  
+  EditBookScreen(this.book, this.index);
+  
   @override
-  _AddBookScreenState createState() => _AddBookScreenState();
+  _EditBookScreenState createState() => _EditBookScreenState();
 }
 
-class _AddBookScreenState extends State<AddBookScreen> {
+class _EditBookScreenState extends State<EditBookScreen> {
   //variables to hold values that is provided in the TextFields
-  String _name, _author, _description;
+  TextEditingController nameController = TextEditingController();
+  TextEditingController authorController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
 
   RemoteDataSource _apiResponse = RemoteDataSource();
 
   @override
   void initState() {
     super.initState();
+    nameController.text = widget.book.name;
+    authorController.text = widget.book.author;
+    descriptionController.text = widget.book.description;
     _apiResponse.init();
-    hasBookAddedListener();
+    hasBookUpdatedListener();
   }
 
-  void hasBookAddedListener() {
-    _apiResponse.hasBookAdded().listen((Result result) {
+  void hasBookUpdatedListener() {
+    _apiResponse.hasBookUpdated().listen((Result result) {
       if (result is LoadingState) {
         showProgressDialog();
       } else if (result is SuccessState) {
@@ -31,7 +41,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
         Navigator.pop(context); //navigate back to Favorite Book screen
       } else {
         SnackBar(
-          content: Text("Unable to add book"),
+          content: Text("Unable to update book"),
           duration: Duration(seconds: 2),
         );
       }
@@ -44,7 +54,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Book"),
+        title: Text("Edit Book"),
       ),
       body: Container(
         padding: EdgeInsets.all(16.0),
@@ -72,41 +82,35 @@ class _AddBookScreenState extends State<AddBookScreen> {
 
   TextField bookTitleTextField() {
     return TextField(
+      controller: nameController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: "Book Title",
         labelText: "Title",
       ),
-      onChanged: (value) {
-        _name = value;
-      },
     );
   }
 
   TextField bookAuthorTextField() {
     return TextField(
+      controller: authorController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: "Book Author",
         labelText: "Author",
       ),
-      onChanged: (value) {
-        _author = value;
-      },
     );
   }
 
   TextField bookDescriptionTextField() {
     return TextField(
+      controller: descriptionController,
       maxLines: 4,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: "Book Description",
         labelText: "Description",
       ),
-      onChanged: (value) {
-        _description = value;
-      },
     );
   }
 
@@ -114,11 +118,11 @@ class _AddBookScreenState extends State<AddBookScreen> {
     return ElevatedButton(
       onPressed: () {
         final book = Book(
-            name: _name, author: _author, description: _description);
-        _apiResponse.addBook(book);
+            name: nameController.text, author: authorController.text, description: descriptionController.text);
+        _apiResponse.updateBook(book, widget.index);
       },
       child: Text(
-        "Add",
+        "Update",
         style: TextStyle(color: Colors.white),
       ),
     );

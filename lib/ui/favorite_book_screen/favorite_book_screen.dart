@@ -1,9 +1,9 @@
 import 'package:book_app/model/library.dart';
 import 'package:book_app/model/result.dart';
 import 'package:book_app/network/remote_data_source.dart';
+import 'package:book_app/ui/addscreen/add_book_screen.dart';
+import 'package:book_app/ui/editscreen/edit_book_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../addscreen/add_book_screen.dart';
 
 class FavoriteBooksScreen extends StatefulWidget {
   @override
@@ -79,6 +79,12 @@ class _FavoriteBooksScreenState extends State<FavoriteBooksScreen> {
           bookCollection.books[index].author,
           style: Theme.of(context).textTheme.caption,
         ),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => EditBookScreen(bookCollection.books[index], 100)), // Hardcoded index 100 because the mock server is set to receive only id 100
+          );
+        },
       ),
     );
   }
