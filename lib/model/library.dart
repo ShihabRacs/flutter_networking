@@ -10,21 +10,11 @@ class Library {
   factory Library.fromRawJson(String str) =>
       Library.fromJson(json.decode(str));
 
-  // factory Library.fromJson(Map<String, dynamic> json) => Library(
-  //     books: List<Book>.from(
-  //         json["books"
-  //             ""].map((x) => Book.fromJson(x)))
-  // );
-
-  factory Library.fromJson(Map<String, dynamic> json) {
-    List<Book> books = [];
-
-    for(int i=0; i<json['books'].length; ++i) {
-      Book tempBook = Book.fromJson(json['books'][i]);
-      books.add(tempBook);
-    }
-    return Library(books: books);
-  }
+  factory Library.fromJson(Map<String, dynamic> json) => Library(
+      books: List<Book>.from(
+          json["books"
+              ""].map((x) => Book.fromJson(x)))
+  );
 
   Map<String, dynamic> toJson() => {
     "books": List<dynamic>.from(books.map((x) => x.toJson())),
