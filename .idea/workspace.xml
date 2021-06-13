@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="19a0accb-6a2f-4953-bd72-e1c4c2244840" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1ts7W4fdtrHOPoWMiKMDsoyoSAy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="G:/official/android" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../book api/book_api_app" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19a0accb-6a2f-4953-bd72-e1c4c2244840" name="Default Changelist" comment="" />
+      <created>1623545971619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623545971619</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623546093790">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623546093790" />
+    <state x="1123" y="284" key="AndroidProcessChooserDialog" timestamp="1623554695446">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1123" y="284" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623554695446" />
+    <state x="1220" y="278" key="FileChooserDialogImpl" timestamp="1623548843522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623548843522" />
+    <state width="1257" height="335" key="GridCell.Tab.0.bottom" timestamp="1623591766887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1257" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
+    <state width="1257" height="335" key="GridCell.Tab.0.center" timestamp="1623591766887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1257" height="335" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
+    <state width="1257" height="335" key="GridCell.Tab.0.left" timestamp="1623591766887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1257" height="335" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
+    <state width="1257" height="335" key="GridCell.Tab.0.right" timestamp="1623591766887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1257" height="335" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623591766887" />
+    <state x="461" y="154" key="SettingsEditor" timestamp="1623559647183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1623559647183" />
+    <state x="710" y="100" width="1117" height="847" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1623553769219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="710" y="100" width="1117" height="847" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623553769219" />
+    <state x="924" y="242" key="run.anything.popup" timestamp="1623559230480">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="924" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1623559230480" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/main.dart</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/model/result.dart</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
