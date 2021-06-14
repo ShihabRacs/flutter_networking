@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19a0accb-6a2f-4953-bd72-e1c4c2244840" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/network/book_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/network/book_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/network/remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/network/remote_data_source.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/editscreen/edit_book_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/editscreen/edit_book_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/favorite_book_screen/favorite_book_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/favorite_book_screen/favorite_book_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mock_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/testRepo/mock_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/network_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/testRepo/network_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,30 +136,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623635141209" />
-    <state width="1863" height="277" key="GridCell.Tab.0.bottom" timestamp="1623646465119">
+    <state width="1863" height="277" key="GridCell.Tab.0.bottom" timestamp="1623647495857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623646465119" />
-    <state width="1863" height="277" key="GridCell.Tab.0.center" timestamp="1623646465119">
+    <state width="1863" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
+    <state width="1863" height="277" key="GridCell.Tab.0.center" timestamp="1623647495857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623646465119" />
-    <state width="1863" height="277" key="GridCell.Tab.0.left" timestamp="1623646465118">
+    <state width="1863" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
+    <state width="1863" height="277" key="GridCell.Tab.0.left" timestamp="1623647495857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623646465118" />
-    <state width="1863" height="277" key="GridCell.Tab.0.right" timestamp="1623646465119">
+    <state width="1863" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
+    <state width="1863" height="277" key="GridCell.Tab.0.right" timestamp="1623647495857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623646465119" />
+    <state width="1863" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
     <state x="461" y="0" key="SettingsEditor" timestamp="1623635453605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1623635453605" />
+    <state x="452" y="187" key="Vcs.Push.Dialog.v2" timestamp="1623647438492">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1623647438492" />
     <state x="710" y="100" width="1117" height="847" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1623553769219">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="710" y="100" width="1117" height="847" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623553769219" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1623647588105">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623647588105" />
     <state x="924" y="242" key="run.anything.popup" timestamp="1623559230480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

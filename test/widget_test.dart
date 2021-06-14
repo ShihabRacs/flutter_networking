@@ -83,7 +83,7 @@ void main() {
          expect(true, state);
 
        });
-   testWidgets("Button should be enabled when one of the text field is populated",
+   testWidgets("Button should be disabled when one of the text field is cleared",
            (WidgetTester tester) async{
          await tester.pumpWidget(MaterialApp(
              home: AddBookScreen(
