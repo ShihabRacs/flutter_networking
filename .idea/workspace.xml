@@ -2,12 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19a0accb-6a2f-4953-bd72-e1c4c2244840" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/app_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/app_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration_test_driver.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration_test_driver.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,16 +58,17 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\flutter_tuts\flutter_networking\test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\flutter_tuts\flutter_networking\utils" />
       <recent name="D:\flutter_tuts\flutter_networking\test" />
       <recent name="D:\flutter_tuts\flutter_networking\testRepo" />
       <recent name="D:\flutter_tuts\flutter_networking" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\flutter_tuts\flutter_networking\test" />
-    </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.Button State tester on Edit books page">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -65,23 +93,26 @@
       <option name="testFile" value="$PROJECT_DIR$/test/widget_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="should not scroll with less items" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="should not scroll with less items" />
-      <option name="testFile" value="$PROJECT_DIR$/test/widget_test.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="testing scrollable list of books" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="testing scrollable list of books" />
       <option name="testFile" value="$PROJECT_DIR$/test/widget_test.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="execute.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/utils/execute.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Shell Script.execute.sh" />
         <item itemvalue="Flutter Test.Button should be disabled when one of the text field is empty" />
         <item itemvalue="Flutter Test.Button State tester" />
         <item itemvalue="Flutter Test.Button should be enabled when one of the text field is populated" />
         <item itemvalue="Flutter Test.testing scrollable list of books" />
-        <item itemvalue="Flutter Test.should not scroll with less items" />
       </list>
     </recent_temporary>
   </component>
@@ -136,22 +167,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623635141209" />
-    <state width="1863" height="277" key="GridCell.Tab.0.bottom" timestamp="1623647495857">
+    <state width="1863" height="269" key="GridCell.Tab.0.bottom" timestamp="1623653022144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
-    <state width="1863" height="277" key="GridCell.Tab.0.center" timestamp="1623647495857">
+    <state width="1863" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623653022144" />
+    <state width="1863" height="269" key="GridCell.Tab.0.center" timestamp="1623653022144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
-    <state width="1863" height="277" key="GridCell.Tab.0.left" timestamp="1623647495857">
+    <state width="1863" height="269" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623653022144" />
+    <state width="1863" height="269" key="GridCell.Tab.0.left" timestamp="1623653022144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
-    <state width="1863" height="277" key="GridCell.Tab.0.right" timestamp="1623647495857">
+    <state width="1863" height="269" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623653022144" />
+    <state width="1863" height="269" key="GridCell.Tab.0.right" timestamp="1623653022144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1863" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623647495857" />
+    <state width="1863" height="269" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623653022144" />
     <state x="461" y="0" key="SettingsEditor" timestamp="1623635453605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
