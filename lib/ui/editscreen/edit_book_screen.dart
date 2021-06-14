@@ -95,6 +95,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
         border: OutlineInputBorder(),
         hintText: "Book Title",
         labelText: "Title",
+        enabled: false,
       ),
     );
   }
@@ -131,7 +132,6 @@ class _EditBookScreenState extends State<EditBookScreen> {
   void setButton() {
     setState(() {
       if(
-      nameController.text == '' ||
           authorController.text == '' ||
           descriptionController.text == ''
       ) {
@@ -145,7 +145,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
   void updateApiCall() {
     final book = Book(
         name: nameController.text, author: authorController.text, description: descriptionController.text);
-    _apiResponse.updateBook(book, widget.index);
+    _apiResponse.updateBook(book);
   }
 
   ElevatedButton submitButton() {

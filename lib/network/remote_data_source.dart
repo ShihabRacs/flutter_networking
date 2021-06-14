@@ -29,7 +29,7 @@ class RemoteDataSource {
 
   Future<Result> getBooks() async {
     try {
-      final response = await client.request(requestType: RequestType.GET, path: "books");
+      final response = await client.request(requestType: RequestType.GET, path: "/crudapps/api/book.php");
       if (response.statusCode == 200) {
         return Result<Library>.success(Library.fromRawJson(response.body));
       } else {
@@ -47,7 +47,9 @@ class RemoteDataSource {
     _addBookStream.sink.add(Result<String>.loading("Loading"));
     try {
       final response = await client.request(
-          requestType: RequestType.POST, path: "books", parameter: book);
+          requestType: RequestType.POST, path: "/crudapps/api/create.php", parameter: book.toJson());
+      print(response.statusCode);
+      print(response.body.toString());
       if (response.statusCode == 200) {
         _addBookStream.sink.add(Result<NetworkResponse>.success(
             NetworkResponse.fromRawJson(response.body)));
@@ -59,11 +61,14 @@ class RemoteDataSource {
     }
   }
 
-  void updateBook(Book book, int index) async {
+  void updateBook(Book book) async {
     _updateBookStream.sink.add(Result<String>.loading("Loading"));
+    String name = book.name;
     try {
       final response = await client.request(
-          requestType: RequestType.PUT, path: "books/$index", parameter: book);
+          requestType: RequestType.PUT, path: "/crudapps/api/update.php?name=$name", parameter: book);
+      print (book.toJson());
+      print(response.body);
       if (response.statusCode == 200) {
         _updateBookStream.sink.add(Result<NetworkResponse>.success(
             NetworkResponse.fromRawJson(response.body)));
@@ -75,10 +80,11 @@ class RemoteDataSource {
     }
   }
 
-  Future<Result> deleteBook(int index) async {
+  Future<Result> deleteBook(Book book) async {
+    String name = book.toJson()["name"];
     try {
       final response = await client.request(
-          requestType: RequestType.DELETE, path: "books/$index");
+          requestType: RequestType.DELETE,path: "/crudapps/api/delete.php?name=$name", parameter: book);
       if (response.statusCode == 200) {
         return Result<NetworkResponse>.success(
             NetworkResponse.fromRawJson(response.body));

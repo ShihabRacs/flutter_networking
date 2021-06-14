@@ -11,7 +11,7 @@ import '../util/request_type_exception.dart';
 
 class BookClient {
   //Base url
-  static const String _baseUrl = "http://10.0.2.2:8888";
+  static const String _baseUrl = "http://10.0.2.2";
   final Client _client;
 
   BookClient(this._client);

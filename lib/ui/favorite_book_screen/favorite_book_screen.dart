@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:book_app/model/library.dart';
 import 'package:book_app/model/result.dart';
 import 'package:book_app/network/remote_data_source.dart';
@@ -6,6 +8,8 @@ import 'package:book_app/ui/editscreen/edit_book_screen.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteBooksScreen extends StatefulWidget {
+
+
   @override
   _FavoriteBooksScreenState createState() => _FavoriteBooksScreenState();
 }
@@ -61,8 +65,11 @@ class _FavoriteBooksScreenState extends State<FavoriteBooksScreen> {
   Dismissible bookListItem(
       int index, Library bookCollection, BuildContext context) {
     return Dismissible(
+      // key: Key(bookCollection.books[index].name),
+      key: UniqueKey(),
       onDismissed: (direction) async {
-        Result result = await _apiResponse.deleteBook(index);
+        Result result = await _apiResponse.deleteBook(bookCollection.books[index]);
+        print(result.toString());
         if (result is SuccessState) {
           setState(() {
             bookCollection.books.removeAt(index);
@@ -72,7 +79,7 @@ class _FavoriteBooksScreenState extends State<FavoriteBooksScreen> {
       background: Container(
         color: Colors.red,
       ),
-      key: Key(bookCollection.books[index].name),
+
       child: ListTile(
         leading: Image.asset("images/book.png"),
         title: Text(bookCollection.books[index].name),
@@ -90,7 +97,7 @@ class _FavoriteBooksScreenState extends State<FavoriteBooksScreen> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => EditBookScreen(bookCollection.books[index], 100)), // Hardcoded index 100 because the mock server is set to receive only id 100
+            MaterialPageRoute(builder: (context) => EditBookScreen(bookCollection.books[index], index)), // Hardcoded index 100 because the mock server is set to receive only id 100
           ).then((value) {
             if (value) {
               final snackBar = SnackBar(
